@@ -194,6 +194,19 @@ function stringConcat (a, b) {
     }
     return result;
 }
-console.log(stringConcat ("cheese", "cake"));//cheesecake
-console.log(stringConcat ("lips", "s"));//slips
-console.log(stringConcat(' think, therefore I am', 'I'));//I think, therefore I am
+console.log(stringConcat ("cheese", "cake")); //cheesecake
+console.log(stringConcat ("lips", "s")); //slips
+console.log(stringConcat(' think, therefore I am', 'I')); //I think, therefore I am
+
+// Round a number to 2 decimal places
+// Write a function that takes a number (a) as argument
+// Round a to the 2nd digit after the comma
+// Return the rounded number
+function roundedNum (a) {
+    let number = 0;
+    number = Math.round(a * 100) / 100;
+    return number;
+}
+console.log(roundedNum(2.12397));
+console.log(roundedNum(26.1379));
+
