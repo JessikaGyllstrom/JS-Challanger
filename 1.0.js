@@ -93,3 +93,12 @@ function removeChars (a) {
 }
 console.log(removeChars("Hellooo")); //hell
 console.log(removeChars("Foobar")); //foo
+
+// Return the percentage of a number
+// Write a function that takes two numbers (a and b) as argument
+// Return b percent of a
+function percentage (a, b) {
+    return (a/100) * b;
+}
+console.log(percentage(100, 50)); // 50
+console.log(percentage(10, 1)); // 0.1
