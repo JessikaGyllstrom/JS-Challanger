@@ -179,3 +179,21 @@ function mathNess (a, b) {
 }
 console.log(mathNess(10, 100)); // 0.1
 console.log(mathNess(90, 45)); // 4050
+
+// Check whether a string contains another string and concatenate
+// Write a function that takes two strings (a and b) as arguments
+// If a contains b, append b to the beginning of a
+// If not, append it to the end
+// Return the concatenation
+function stringConcat (a, b) {
+    let result = "";
+    if(a.includes(b)) {
+        result = b.concat(a);
+    } else {
+        result = a.concat(b);
+    }
+    return result;
+}
+console.log(stringConcat ("cheese", "cake"));//cheesecake
+console.log(stringConcat ("lips", "s"));//slips
+console.log(stringConcat(' think, therefore I am', 'I'));//I think, therefore I am
