@@ -210,3 +210,19 @@ function roundedNum (a) {
 console.log(roundedNum(2.12397));
 console.log(roundedNum(26.1379));
 
+// Split a number into its digits
+// Write a function that takes a number (a) as argument
+// Split a into its individual digits and return them in an array
+function numSplit (a) {
+    let str = a.toString();
+    str = str.split("");
+    return str;
+}
+console.log(numSplit(10)); // [ '1', '0' ]
+console.log(numSplit(931)); // [ '9', '3' ,'1']
+
+// It seems like something happened to these strings
+// Can you figure out how to clear up the chaos?
+// Write a function that joins these strings together such that they form the following words:
+// 'Javascript', 'Countryside', and 'Downtown'
+// You might want to apply basic JS string methods such as replace(), split(), slice() etc
