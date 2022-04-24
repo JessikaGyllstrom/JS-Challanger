@@ -44,7 +44,18 @@ function nthChar (a, b) {
     let char = a[charPlace-1];
     return char;
 }
-console.log(nthChar("Konbanwa", 2)); // 
-console.log(nthChar("Ohayō", 4)); // 
+console.log(nthChar("Konbanwa", 2)); // o
+console.log(nthChar("Ohayō", 4)); // y
 
-
+// Remove first 3 characters of string
+// Write a function that takes a string (a) as argument
+// Remove the first 3 characters of a
+// Return the result
+function removeThreeChars (a) {
+    let string = "";
+    for ( i = 3; i < a.length ; i++) {
+        console.log(a[i]);
+    }
+}
+removeThreeChars("Helloo"); //loo 
+removeThreeChars("Sloth"); //th
