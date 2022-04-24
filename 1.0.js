@@ -23,4 +23,18 @@ console.log(comparisonOp(5, '5')); //false
 console.log(comparisonOp(5, 5)); //true
 console.log(comparisonOp("A", "B")); //false
 
+// Get type of value
+// Write a function that takes a value as argument
+// Return the type of the value
+function typeOfValue (a) {
+    let type = typeof (a);
+    return type
+}
+let sym = Symbol();
+let x = false;
+console.log(typeOfValue(5)); //number
+console.log(typeOfValue("5")); //string
+console.log(typeOfValue(x)); //boolean
+
+
 
