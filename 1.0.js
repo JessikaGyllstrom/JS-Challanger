@@ -79,3 +79,17 @@ function halfString (a) {
     return myStr;
 } 
 console.log(halfString("ABCDEF")); //ABC
+console.log(halfString("KhalDrogo")); //Khal
+
+// Remove last n characters of string
+// Write a function that takes a string (a) as argument
+// Remove the last 3 characters of a
+// Return the result
+function removeChars (a) {
+    let lastChar = a.length;
+    let thirdLastChar = lastChar - 3;
+    let newStr = a.slice(0, thirdLastChar);
+    return newStr;
+}
+console.log(removeChars("Hellooo")); //hell
+console.log(removeChars("Foobar")); //foo
