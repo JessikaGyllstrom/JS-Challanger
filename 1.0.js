@@ -1,6 +1,9 @@
 // Sum two numbers
 // Write a function that takes two numbers (a and b) as argument
 // Sum a and b
+
+const { loadDefaultErrorComponents } = require("next/dist/server/load-components");
+
 // Return the result
 function addingTwoNums (a, b) {
     let sum = a + b;
@@ -102,3 +105,17 @@ function percentage (a, b) {
 }
 console.log(percentage(100, 50)); // 50
 console.log(percentage(10, 1)); // 0.1
+
+// Basic JavaScript math operators
+// Write a function that takes 6 values (a,b,c,d,e,f) as arguments
+// Sum a and b
+// Then substract by c
+// Then multiply by d and divide by e
+// Finally raise to the power of f and return the result
+function mathOps (a, b, c, d, e, f) {
+    let numb = (a + b - c ) * d / e;
+    let result = Math.pow(numb, f);
+    return result;
+}
+console.log(mathOps(6,5,4,3,2,1)); //10.5
+console.log(mathOps(6,2,1,4,2,3)); //2744
