@@ -163,3 +163,19 @@ function checkIfInteger (a) {
 console.log(checkIfInteger(3)); // true
 console.log(checkIfInteger(1.3)); // false
 
+// Multiplication, division, and comparison operators
+// Write a function that takes two numbers (a and b) as arguments
+// If a is smaller than b, divide a by b
+// Otherwise, multiply both numbers
+// Return the resulting value
+function mathNess (a, b) {
+    let number = 0;
+    if(a < b) {
+        number = a / b;
+    } else {
+        number = a * b;
+    }
+    return number;
+}
+console.log(mathNess(10, 100)); // 0.1
+console.log(mathNess(90, 45)); // 4050
