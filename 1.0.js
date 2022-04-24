@@ -36,5 +36,15 @@ console.log(typeOfValue(5)); //number
 console.log(typeOfValue("5")); //string
 console.log(typeOfValue(x)); //boolean
 
+// Get nth character of string
+// Write a function that takes a string (a) and a number (n) as argument
+// Return the nth character of 'a'
+function nthChar (a, b) {
+    let charPlace = b; 
+    let char = a[charPlace-1];
+    return char;
+}
+console.log(nthChar("Konbanwa", 2)); // 
+console.log(nthChar("Ohayō", 4)); // 
 
 
