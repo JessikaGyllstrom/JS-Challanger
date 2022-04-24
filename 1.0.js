@@ -149,3 +149,17 @@ function checkCharOcc (a, b) {
 console.log(checkCharOcc('h', 'how many times does the character occur in this sentence?')); //4 
 console.log(checkCharOcc('m', 'how many times does the character occur in this sentence?')); //2
 
+// Check if a number is a whole number
+// Write a function that takes a number (a) as argument
+// If a is a whole number (has no decimal place), return true
+// Otherwise, return false
+function checkIfInteger (a) {
+    if(Number.isInteger(a)==true) {
+        return true;
+    } else {
+        return false;
+    }
+}
+console.log(checkIfInteger(3)); // true
+console.log(checkIfInteger(1.3)); // false
+
