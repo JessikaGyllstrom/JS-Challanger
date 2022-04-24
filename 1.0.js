@@ -119,3 +119,17 @@ function mathOps (a, b, c, d, e, f) {
 }
 console.log(mathOps(6,5,4,3,2,1)); //10.5
 console.log(mathOps(6,2,1,4,2,3)); //2744
+
+// Check if a number is even
+// Write a function that takes a number as argument
+// If the number is even, return true
+// Otherwise, return false
+function checkIfEven (a) {
+    if (a%2==0) {
+        return true;
+    } else {
+        return false;
+    }
+}
+console.log(checkIfEven(5)); //false
+console.log(checkIfEven(2)); //true
