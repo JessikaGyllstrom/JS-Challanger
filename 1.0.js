@@ -52,10 +52,20 @@ console.log(nthChar("Ohayō", 4)); // y
 // Remove the first 3 characters of a
 // Return the result
 function removeThreeChars (a) {
-    let string = "";
-    for ( i = 3; i < a.length ; i++) {
-        console.log(a[i]);
-    }
+    let string = a.slice(0,3);
+    return string;
 }
 removeThreeChars("Helloo"); //loo 
 removeThreeChars("Sloth"); //th
+
+// Get last n characters of string
+// Write a function that takes a string as argument
+// Extract the last 3 characters from the string
+// Return the result
+function lastChar (a) {
+    let str = a.slice(-3);
+    return str;
+}
+console.log(lastChar("Meerkat")); //kat
+console.log(lastChar("abcdefghijklmnopqrstu")); //stu
+
