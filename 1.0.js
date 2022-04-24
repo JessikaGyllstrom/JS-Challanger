@@ -133,3 +133,19 @@ function checkIfEven (a) {
 }
 console.log(checkIfEven(5)); //false
 console.log(checkIfEven(2)); //true
+
+// How many times does a character occur?
+// Write a function that takes two strings (a and b) as arguments
+// Return the number of times a occurs in b
+function checkCharOcc (a, b) {
+    let numOfTimes = 0;
+    for(i = 0; i < b.length; i++) {
+        if(a==b[i]) {
+            numOfTimes ++;
+        }
+    }
+    return numOfTimes;
+}
+console.log(checkCharOcc('h', 'how many times does the character occur in this sentence?')); //4 
+console.log(checkCharOcc('m', 'how many times does the character occur in this sentence?')); //2
+
