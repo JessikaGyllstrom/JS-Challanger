@@ -69,3 +69,13 @@ function lastChar (a) {
 console.log(lastChar("Meerkat")); //kat
 console.log(lastChar("abcdefghijklmnopqrstu")); //stu
 
+// Extract first half of string
+// Write a function that takes a string (a) as argument
+// Extract the first half a
+// Return the result
+function halfString (a) {
+    let half = a.length/2;
+    let myStr = a.slice(0,half);
+    return myStr;
+} 
+console.log(halfString("ABCDEF")); //ABC
