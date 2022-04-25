@@ -221,8 +221,23 @@ function numSplit (a) {
 console.log(numSplit(10)); // [ '1', '0' ]
 console.log(numSplit(931)); // [ '9', '3' ,'1']
 
+// Clear up the chaos behind these strings
 // It seems like something happened to these strings
 // Can you figure out how to clear up the chaos?
-// Write a function that joins these strings together such that they form the following words:
+// Write a function that joins these strings together 
+// such that they form the following words:
 // 'Javascript', 'Countryside', and 'Downtown'
 // You might want to apply basic JS string methods such as replace(), split(), slice() etc
+function sortString (a, b) {
+    let firstWord = a;
+    let secondWord = "";
+    firstWord = firstWord.charAt(0).toUpperCase() + firstWord.slice(1);
+    firstWord = firstWord.replace(/%/g, "");
+    for (let i = b.length - 1; i >= 0; i--) {
+        secondWord += b[i];
+    }
+    secondWord = secondWord.replace(/%/g, "");
+    return firstWord + ", " + secondWord; 
+}
+console.log(sortString('java', 'tpi%rcs'));
+console.log(sortString('c%ountry', 'edis'));
