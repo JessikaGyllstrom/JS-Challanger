@@ -32,8 +32,28 @@ function lastThreeElements (a) {
     let newArr = a.slice(start,end); 
     return newArr;
 }
-
 console.log(lastThreeElements([1,2,3,4]));//2, 3, 4
-console.log(lastThreeElements([5,4,3,2,1,0]));//2, 3, 4
+console.log(lastThreeElements([5,4,3,2,1,0]));//2, 1, 9
 
+// Get first n elements of an array
+// Write a function that takes an array (a) as argument
+// Extract the first 3 elements of a
+// Return the resulting array
+function getFirstElements (a) {
+    let newArr = a.slice(0,3); 
+    return newArr;
+}
+console.log(getFirstElements([1,2,3,4]));//1, 2, 3
+console.log(getFirstElements([5,4,3,2,1,0]));//5, 4, 3
+
+// Return last n array elements
+// Write a function that takes an array (a) and a number (n) as arguments
+// It should return the last n elements of a
+function lastElements (a, n) {
+    let start = a.length - n;
+    let newArr = a.slice(start,a.length); 
+    return newArr;
+}
+console.log(lastElements([1, 2, 3, 4, 5], 2));//4, 5
+console.log(lastElements([1, 2, 3], 6));//1, 2, 3
 
