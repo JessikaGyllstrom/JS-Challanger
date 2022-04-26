@@ -276,8 +276,6 @@ console.log(primeNumber(2003));//2003
 // Check if x is divisible by y
 // If yes, return x
 // If not, return the next higher natural number that is divisible by y
-
-
 function numberCheck(x,y) {
     function checkIfDivable(x,y) {
         if(x % y === 0) {
@@ -299,3 +297,15 @@ console.log(numberCheck(23,23));//23
 console.log(numberCheck(7,3));//9
 console.log(numberCheck(-5,7));//0
 
+// Insert character after every n characters (backwards)
+// Write a function that takes two strings (a and b) as arguments
+// Beginning at the end of 'a', insert 'b' after every 3rd character of 'a'
+// Return the resulting string
+function backwardString(a, b) {
+    let str = "";
+    let length = a.length - 3;
+    str = a.slice(0, length) + b + a.slice(length);
+    return str;
+}
+console.log(backwardString('abcde','$'));
+console.log(backwardString('zxyzxyzxyzxyzxyz','w'));
