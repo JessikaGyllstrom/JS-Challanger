@@ -57,3 +57,23 @@ function lastElements (a, n) {
 console.log(lastElements([1, 2, 3, 4, 5], 2));//4, 5
 console.log(lastElements([1, 2, 3], 6));//1, 2, 3
 
+// Remove a specific array element
+// Write a function that takes an array (a) and a value (b) as argument
+// The function should clean a from all occurrences of b
+// Return the filtered array
+function removeEl (a, n) {
+    for( var i = 0; i < a.length; i++){ 
+    
+        if ( a[i] === n) { 
+    
+            a.splice(i, 1); 
+        }
+    
+    }
+    return a;
+
+}
+console.log(removeEl([1,2,3], 2));//1, 3
+console.log(removeEl([1,2,"2"], "2"));//1, 2
+
+
