@@ -242,4 +242,31 @@ function sortString (a, b) {
 console.log(sortString('java', 'tpi%rcs'));
 console.log(sortString('c%ountry', 'edis'));
 
+// Return the next higher prime number
+// This challenge is a little bit more complex
+// Write a function that takes a number (a) as argument
+// If a is prime, return a
+// If not, return the next higher prime number
 
+function primeNumber(a) {
+    function checkIfPrime(a) {
+      for (var i = 2; i < a; i++) {
+        if (a % i === 0) {
+          return false;
+        }
+      }
+      return true;
+    }
+    if (checkIfPrime(a)) {
+      return a;
+    } else {
+      while (checkIfPrime(a) === false) {
+        a++;
+      }
+    }
+    return a;
+}
+console.log(primeNumber(7));//7
+console.log(primeNumber(38));//41
+console.log(primeNumber(115));//127
+console.log(primeNumber(2003));//2003
