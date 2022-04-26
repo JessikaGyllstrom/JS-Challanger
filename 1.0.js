@@ -270,3 +270,32 @@ console.log(primeNumber(7));//7
 console.log(primeNumber(38));//41
 console.log(primeNumber(115));//127
 console.log(primeNumber(2003));//2003
+
+// Find next higher natural number that is divisble by y
+// Write a function that takes two numbers, say x and y, as arguments
+// Check if x is divisible by y
+// If yes, return x
+// If not, return the next higher natural number that is divisible by y
+
+
+function numberCheck(x,y) {
+    function checkIfDivable(x,y) {
+        if(x % y === 0) {
+            return true;
+        }
+        return false;
+    }
+    if(checkIfDivable(x,y)) {
+        return x;
+    } else {
+        while(checkIfDivable(x,y) === false) {
+            x++;
+        }
+    }
+    return x;
+}
+console.log(numberCheck(1,23));//23
+console.log(numberCheck(23,23));//23
+console.log(numberCheck(7,3));//9
+console.log(numberCheck(-5,7));//0
+
