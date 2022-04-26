@@ -63,17 +63,31 @@ console.log(lastElements([1, 2, 3], 6));//1, 2, 3
 // Return the filtered array
 function removeEl (a, n) {
     for( var i = 0; i < a.length; i++){ 
-    
         if ( a[i] === n) { 
-    
             a.splice(i, 1); 
         }
-    
     }
     return a;
-
 }
 console.log(removeEl([1,2,3], 2));//1, 3
 console.log(removeEl([1,2,"2"], "2"));//1, 2
 
+// Count number of elements in JavaScript array
+// Write a function that takes an array (a) as argument
+// Return the number of elements in a
+let elementCount = (a) => a.length;
+console.log(elementCount([1,2,2,4]));
 
+// Count number of negative values in array
+// Write a function that takes an array of numbers as argument
+// Return the number of negative values in the array
+function negativeCounter (a) {
+    counter = 0;
+    for(let i = 0; i < a.length; i++) {
+        if(a[i] < 0) {
+            counter++;
+        }
+    }
+    return counter;
+}
+console.log(negativeCounter([1,-2,2,-4]));//2
