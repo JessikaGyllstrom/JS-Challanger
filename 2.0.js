@@ -8,3 +8,18 @@ function getNthElement (a, n) {
 console.log(getNthElement([1,2,3,4,5],3));//3
 console.log(getNthElement([10,9,8,7,6],5));//6
 console.log(getNthElement([7,2,1,6,3],1));//7
+
+// Remove first n elements of an array
+// Write a function that takes an array (a) as argument
+// Remove the first 3 elements of 'a'
+// Return the result
+function removeElements (a) {
+    let length = a.length+1;
+    let newArr = a.slice(3,length); 
+    return newArr;
+
+
+}
+console.log(removeElements([1,2,3,4]));//4
+console.log(removeElements([5,4,3,2,1,0]));//2,1,0
+console.log(removeElements([99,1,1]));//" "
