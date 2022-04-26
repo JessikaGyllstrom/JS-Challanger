@@ -309,3 +309,22 @@ function backwardString(a, b) {
 }
 console.log(backwardString('abcde','$'));
 console.log(backwardString('zxyzxyzxyzxyzxyz','w'));
+
+// Find the correct word by incrementing letters in alphabet
+// Write a function that takes a string as argument
+// As it is, the string has no meaning
+// Increment each letter to the next letter in the alphabet
+// Return the correct word
+function incrementString (str) {
+let newStr = Array.from(str);
+let result = "";
+    for(let i = 0; i < newStr.length; i ++) {
+        newStr[i] = String.fromCharCode(str.charCodeAt(i) + 1);
+    }
+    result = newStr.join();
+    result = result.replace(/,/g, "");
+    return result;
+}
+console.log(incrementString("bnchmf"));//coding
+console.log(incrementString("bgddrd"));//cheese
+console.log(incrementString("sdrshmf"));//testing
