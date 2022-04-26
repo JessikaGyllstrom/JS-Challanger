@@ -91,3 +91,47 @@ function negativeCounter (a) {
     return counter;
 }
 console.log(negativeCounter([1,-2,2,-4]));//2
+
+// Sort an array of numbers in descending order
+// Write a function that takes an array of numbers as argument
+// It should return an array with the numbers sorted in descending order
+let arraySorter = (a) => a.sort();
+console.log(arraySorter([1,3,2])); //1, 2, 3
+console.log(arraySorter([4,2,3,1])); //1, 2, 3, 4
+
+// Sort an array of strings alphabetically
+// Write a function that takes an array of strings as argument
+// Sort the array elements alphabetically
+// Return the result
+let alphaSorter = (a) => a.sort();
+console.log(alphaSorter(['b', 'c', 'd', 'a'])); //a, b, c, d
+
+// Return the average of an array of numbers
+// Write a function that takes an array of numbers as argument
+// It should return the average of the numbers
+function getAverage (a) {
+    let result = 0;
+    let sum = 0;
+    for(let i = 0; i < a.length; i++) {
+        sum = sum + a[i];
+    }
+    return sum / a.length;
+} 
+console.log(getAverage(([10,100,40]))); //50
+console.log(getAverage([10,100,1000])); //370
+
+// Return the longest string from an array of strings
+// Write a function that takes an array of strings as argument
+// Return the longest string
+function longestString (a) {
+    console.log(a);
+    if(a[0] > [1]) {
+        return a[0];
+    } else {
+        return a[1];
+    }
+} 
+console.log(longestString(['help', 'me'])); //helt
+
+
+
