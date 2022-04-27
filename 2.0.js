@@ -157,8 +157,15 @@ console.log(mergeArrays([1, 2, 3], [4, 5, 6]));
 console.log(mergeArrays(['a', 'b', 'c'], [4, 5, 6]));
 console.log(mergeArrays([true, true], [1, 2], ['a', 'b']));
 
+// Sort array by object property
+// Write a function that takes an array of objects as argument
+// Sort the array by property b in ascending order
+// Return the sorted array
+function sortArr (arr) {
+    arr.sort((a, b) => (a.b > b.b) ? 1 : -1)
+    return arr;
+}
 
-
-
-
+console.log(sortArr([{a:2,b:10},{a:5,b:4}]));
+console.log(sortArr([{a:1,b:7},{a:2,b:1}]));
 
