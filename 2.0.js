@@ -187,3 +187,20 @@ function mergeTwoArr (a,b) {
 }
 console.log(mergeTwoArr([1, 2, 3], [3, 4, 5]));//  1, 2, 3, 4, 5 
 console.log(mergeTwoArr([-10, 22, 333, 42], [-11, 5, 22, 41, 42])); //  -11, -10,   5, 22, 41,  42, 333
+
+// Sum up all array elements with values greater than
+// Write a function that takes an array (a) and a number (b) as arguments
+// Sum up all array elements with a value greater than b
+// Return the sum
+function sumOfArr (a, b) {
+    let newArr = [];
+    for(let i = 0; i < a.length; i ++) {
+        if(a[i] > b) {
+            newArr[i] = a[i];
+        } 
+    }
+    var sum = newArr.reduce(function(a, b) { return a + b; }, 0);
+    return sum;
+}
+console.log(sumOfArr([-10, -11, -3, 1, -4], -3));//1
+console.log(sumOfArr([78, 99, 100, 101, 401], 99));//602
