@@ -149,7 +149,13 @@ function checkEqual (a) {
 console.log(checkEqual(([true, true, true, true])));//true
 console.log(checkEqual(([1,1,1,2])));//false
 
-
+// Merge an arbitrary number of arrays
+// Write a function that takes arguments an arbitrary number of arrays
+// It should return an array containing the values of all arrays
+const mergeArrays = (...arrays) => newData = [].concat(...arrays);
+console.log(mergeArrays([1, 2, 3], [4, 5, 6]));
+console.log(mergeArrays(['a', 'b', 'c'], [4, 5, 6]));
+console.log(mergeArrays([true, true], [1, 2], ['a', 'b']));
 
 
 
