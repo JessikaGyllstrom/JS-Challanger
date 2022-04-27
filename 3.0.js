@@ -19,11 +19,25 @@ console.log(checkIfDateEqual(new Date('2000/01/01 08:00:00'), new Date('2000/01/
 // Write a function that takes two date instances as argument
 // It should return the number of days that lies between those dates
 function numOfDays (a, b) {
-    console.log(a);
     const oneDay = 24 * 60 * 60 * 1000; 
     const diffDays = Math.round(Math.abs((a - b) / oneDay));
-    console.log(diffDays);
+    return diffDays;
 }
-console.log(numOfDays(new Date('2020-06-11'), new Date('2020-06-01')));
-console.log(numOfDays(new Date('2000-01-01'), new Date('2020-06-01')));
+console.log(numOfDays(new Date('2020-06-11'), new Date('2020-06-01'))); //10
+console.log(numOfDays(new Date('2000-01-01'), new Date('2020-06-01'))); //7457
+
+// Check if two dates fall on the exact same day
+// Write a function that takes two date instances as argument
+// It should return true if they fall on the exact same day
+// It should return false otherwise
+function checkIfSameDay(a, b)   {
+    let dayA = a.getDay();
+    if(a.getDate() === b.getDate()){
+        return true;
+    } else {
+        return false;
+    }
+}
+console.log(checkIfSameDay(new Date('2000-01-01'), new Date('2020-06-01')));//true
+console.log(checkIfSameDay(new Date('2000/01/01'), new Date('2000/01/02')));//false
 
