@@ -12,7 +12,7 @@ function checkIfDateEqual (a, b) {
         return true;
     }
 }
-console.log(checkIfDateEqual(new Date('2000/01/01 08:00:00'), new Date('2000/01/01 08:45:00')));//fasle
+console.log(checkIfDateEqual(new Date('2000/01/01 08:00:00'), new Date('2000/01/01 08:45:00')));//false
 console.log(checkIfDateEqual(new Date('2000/01/01 08:00:00'), new Date('2000/01/01 08:00:00')));//true
 
 // Return the number of days between two dates
@@ -30,8 +30,7 @@ console.log(numOfDays(new Date('2000-01-01'), new Date('2020-06-01'))); //7457
 // Write a function that takes two date instances as argument
 // It should return true if they fall on the exact same day
 // It should return false otherwise
-function checkIfSameDay(a, b)   {
-    let dayA = a.getDay();
+function checkIfSameDay(a, b) {
     if(a.getDate() === b.getDate()){
         return true;
     } else {
@@ -41,3 +40,18 @@ function checkIfSameDay(a, b)   {
 console.log(checkIfSameDay(new Date('2000-01-01'), new Date('2020-06-01')));//true
 console.log(checkIfSameDay(new Date('2000/01/01'), new Date('2000/01/02')));//false
 
+// Check if two dates are within 1 hour from each other
+// Write a function that takes two date instances as argument
+// It should return true if the difference between the dates is less than or equal to 1 hour
+// It should return false otherwise
+function checkIfWithinHour (a, b) {
+    let diff = a.getHours() - b.getHours();
+    console.log(diff);
+    if(diff < 0) {
+        return false;
+    } else {
+        return true;
+    }
+}
+console.log(checkIfWithinHour(new Date('2000/01/01 08:00:00'), new Date('2000/01/01 08:45:00')));//true
+console.log(checkIfWithinHour(new Date('2000/01/01 08:00:00'), new Date('2000/01/01 09:45:00')));//false
