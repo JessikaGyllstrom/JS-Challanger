@@ -204,3 +204,17 @@ function sumOfArr (a, b) {
 }
 console.log(sumOfArr([-10, -11, -3, 1, -4], -3));//1
 console.log(sumOfArr([78, 99, 100, 101, 401], 99));//602
+
+// Create a range of numbers
+// Write a function that takes two numbers (min and max) as arguments
+// Return an array of numbers in the range min to max
+function rangeArr (x, y) {
+    let newArr = [];
+    for(let i = x; i <= y; i++) {
+        newArr.push(i);
+    }
+    const clearArray = newArr.filter(i => i);
+    return clearArray;
+}
+console.log(rangeArr(2, 10)); //  2, 3, 4,  5, 6, 7, 8, 9, 10
+console.log(rangeArr(-5, 5)); //  -5, -4, -3, -2, -1, 1,  2,  3,  4,  5
