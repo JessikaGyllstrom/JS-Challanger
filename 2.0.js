@@ -218,3 +218,29 @@ function rangeArr (x, y) {
 }
 console.log(rangeArr(2, 10)); //  2, 3, 4,  5, 6, 7, 8, 9, 10
 console.log(rangeArr(-5, 5)); //  -5, -4, -3, -2, -1, 1,  2,  3,  4,  5
+
+// Group array of strings by first letter
+// Write a function that takes an array of strings as argument
+// Group those strings by their first letter
+// Return an object that contains properties with keys representing first letters
+// The values should be arrays of strings containing only the corresponding strings
+// For example, the array ['Alf', 'Alice', 'Ben'] should be transformed to
+// { a: ['Alf', 'Alice'], b: ['Ben']}
+function groupArr (arr) {
+let resultObj = {};
+for (let i =0; i < arr.length; i++) {
+  let currentWord = arr[i];
+  let firstChar = currentWord[0].toLowerCase();
+  let innerArr = [];
+  if (resultObj[firstChar] === undefined) {
+    innerArr.push(currentWord);
+    resultObj[firstChar] = innerArr
+  } else {
+    resultObj[firstChar].push(currentWord)
+  }
+}
+return resultObj
+}
+console.log(groupArr(['Alf', 'Alice', 'Ben'])); //{ a: [ 'Alf', 'Alice' ], b: [ 'Ben' ] }
+console.log(groupArr(['Ant', 'Bear', 'Bird'])); //{ a: [ 'Ant' ], b: [ 'Bear', 'Bird' ] }
+
