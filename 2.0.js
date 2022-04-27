@@ -244,3 +244,25 @@ return resultObj
 console.log(groupArr(['Alf', 'Alice', 'Ben'])); //{ a: [ 'Alf', 'Alice' ], b: [ 'Ben' ] }
 console.log(groupArr(['Ant', 'Bear', 'Bird'])); //{ a: [ 'Ant' ], b: [ 'Bear', 'Bird' ] }
 
+// Define an array with conditional elements
+// Write a function that takes an array with arbitrary elements and a number as arguments
+// Return a new array, the first element should be either the given number itself
+// or zero if the number is smaller than 6
+// The other elements should be the elements of the original array
+// Try not to mutate the original array
+function conditionalArr (arr, num) {
+    let newArr = [];
+    for(let i = 0; i < arr.length; i++) {
+        newArr[i] = arr[i];
+    }
+    if(newArr[0] < 6) {
+        newArr.unshift(num);
+    } else {
+        newArr.unshift(0);
+    }
+    return newArr;
+}
+console.log(conditionalArr([1,2,3], 6)); // [6,1,2,3]
+console.log(conditionalArr(['a','b'], 2)); // [0,'a','b']
+console.log(conditionalArr([null,false], 11));// [0,'a','b']
+
