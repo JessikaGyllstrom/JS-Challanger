@@ -266,3 +266,17 @@ console.log(conditionalArr([1,2,3], 6)); // [6,1,2,3]
 console.log(conditionalArr(['a','b'], 2)); // [0,'a','b']
 console.log(conditionalArr([null,false], 11));// [0,'a','b']
 
+// Get every nth element of array
+// Write a function that takes an array (a) and a value (n) as arguments
+// Save every nth element in a new array
+// Return the new array
+function nthElementInArr (a, n) {
+    let newArr = [];
+    for(let i = n - 1; i < a.length; i += n) {
+        newArr[i] = a[i];
+    } 
+    const clearArray = newArr.filter(i => i); 
+    return clearArray;
+}
+console.log(nthElementInArr([1,2,3,4,5,6,7,8,9,10],3)); // [ 3, 6, 9 ]
+console.log(nthElementInArr([10,9,8,7,6,5,4,3,2,1],5)); // [ 6, 1 ]
