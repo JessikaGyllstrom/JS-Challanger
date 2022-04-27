@@ -165,7 +165,25 @@ function sortArr (arr) {
     arr.sort((a, b) => (a.b > b.b) ? 1 : -1)
     return arr;
 }
+console.log(sortArr([{a:2,b:10},{a:5,b:4}]));//[ { a: 5, b: 4 }, { a: 2, b: 10 } ]
+console.log(sortArr([{a:1,b:7},{a:2,b:1}]));//[ { a: 2, b: 1 }, { a: 1, b: 7 } ]
 
-console.log(sortArr([{a:2,b:10},{a:5,b:4}]));
-console.log(sortArr([{a:1,b:7},{a:2,b:1}]));
-
+// Merge two arrays with duplicate values
+// Write a function that takes two arrays as arguments
+// Merge both arrays and remove duplicate values
+// Sort the merge result in ascending order
+// Return the resulting array
+function mergeTwoArr (a,b) {
+     // merge two arrays
+    let newArr = a.concat(b);
+    let unique = [];
+    newArr.forEach((c) => {
+        if (!unique.includes(c)) {
+        unique.push(c);
+        }
+    });
+    unique.sort((a, b) => a - b);
+    return unique;
+}
+console.log(mergeTwoArr([1, 2, 3], [3, 4, 5]));//  1, 2, 3, 4, 5 
+console.log(mergeTwoArr([-10, 22, 333, 42], [-11, 5, 22, 41, 42])); //  -11, -10,   5, 22, 41,  42, 333
