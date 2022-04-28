@@ -22,3 +22,19 @@ console.log(checkIfValuePresent(new Set(['1', '2', '3']), '2'));//true
 const convertSetToArray = (set) => Array.from(set);
 console.log(convertSetToArray(new Set([1, 2, 3])));// [1, 2, 3]
 console.log(convertSetToArray(new Set('123'))); // [1, 2, 3]
+
+// Get union of two sets
+// Write a function that takes two Sets as arguments
+// Create the union of the two sets
+// Return the result
+// Tipp: try not to switch to Arrays, this would slow down your code
+function uniteSets (a, b)  {
+    const union = new Set(a);
+    for (const elem of b) {
+        union.add(elem);
+    }
+    return union;
+}
+console.log(uniteSets(new Set('123'), new Set('234'))); // { '1', '2', '3', '4' }
+
+console.log(uniteSets(new Set([false, false, NaN]), new Set([true, true, NaN]))); // { false, NaN, true }
