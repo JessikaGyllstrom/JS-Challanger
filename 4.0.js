@@ -14,3 +14,11 @@ function checkIfValuePresent (set, val) {
 console.log(checkIfValuePresent(new Set([1, 2, 3]), 2)); //true
 console.log(checkIfValuePresent(new Set([123]), 2)); //false
 console.log(checkIfValuePresent(new Set(['1', '2', '3']), '2'));//true
+
+// Convert a Set to Array
+// Write a function that takes a Set as argument
+// Convert the Set to an Array
+// Return the Array
+const convertSetToArray = (set) => Array.from(set);
+console.log(convertSetToArray(new Set([1, 2, 3])));// [1, 2, 3]
+console.log(convertSetToArray(new Set('123'))); // [1, 2, 3]
