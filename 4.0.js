@@ -67,3 +67,19 @@ function deleteSetElement (set, val) {
 }
 console.log(deleteSetElement(new Set([1, 2, 3]), 1)); // { 2, 3 }
 console.log(deleteSetElement(new Set('12345'), '3')); // { '1', '2', '4', '5' }
+
+// Add multiple elements to Set
+// Write a function that takes a Set and an array as arguments
+// If not already existing, add each element in the array to the Set
+// Return the modified Set
+function addValuesToSet (set, arr) {
+    for(let i = 0; i < arr.length; i ++) {
+        set.add(arr[i]);
+    }
+    return set;
+}
+console.log(addValuesToSet(new Set([1, 2, 3]), [4, 5, 6])); // { 1, 2, 3, 4, 5, 6 }
+console.log(addValuesToSet(new Set('12345'), [...'6789'])); // { 1, 2, 3, 4, 5, 6 }
+console.log(addValuesToSet(new Set([1, 2, 3]), [2, 3])); // { 1, 2, 3 }
+
+
