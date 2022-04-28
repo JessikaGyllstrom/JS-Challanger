@@ -36,5 +36,20 @@ function uniteSets (a, b)  {
     return union;
 }
 console.log(uniteSets(new Set('123'), new Set('234'))); // { '1', '2', '3', '4' }
-
 console.log(uniteSets(new Set([false, false, NaN]), new Set([true, true, NaN]))); // { false, NaN, true }
+
+// Creating Javascript Sets
+// Write a function that takes three elements of any type as arguments
+// Create a Set from those elements
+// Return the result
+function createSet (a, b, c) {
+    let myset = new Set();
+    for (var i = 0, j = arguments.length; i < j; i++){
+        myset.add(arguments[i]);
+        console.log(arguments[i]+' ');
+    }
+    return myset;
+}
+console.log(createSet(1, 'b', 3)); // { 1, 'b', 3 }
+console.log(createSet(NaN, null, false)); //  { NaN, null, false }
+
