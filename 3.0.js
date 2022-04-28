@@ -46,7 +46,6 @@ console.log(checkIfSameDay(new Date('2000/01/01'), new Date('2000/01/02')));//fa
 // It should return false otherwise
 function checkIfWithinHour (a, b) {
     let diff = a.getHours() - b.getHours();
-    console.log(diff);
     if(diff < 0) {
         return false;
     } else {
@@ -55,3 +54,17 @@ function checkIfWithinHour (a, b) {
 }
 console.log(checkIfWithinHour(new Date('2000/01/01 08:00:00'), new Date('2000/01/01 08:45:00')));//true
 console.log(checkIfWithinHour(new Date('2000/01/01 08:00:00'), new Date('2000/01/01 09:45:00')));//false
+
+// Check if one date is earlier than another
+// Write a function that takes two date instances (a and b) as arguments
+// It should return true if a is earlier than b
+// It should return false otherwise
+function checkIfEarlier (a ,b) {
+    if (a < b) {
+        return true;
+    } else {
+        return false;
+    }
+}
+console.log(checkIfEarlier(new Date('2000/01/01 08:00:00'), new Date('2000/01/01 08:45:00')));//true
+console.log(checkIfEarlier(new Date('2000/01/01 08:45:00'), new Date('2000/01/01 08:00:00')));//false
