@@ -53,3 +53,17 @@ function createSet (a, b, c) {
 console.log(createSet(1, 'b', 3)); // { 1, 'b', 3 }
 console.log(createSet(NaN, null, false)); //  { NaN, null, false }
 
+// Delete element from Set
+// Write a function that takes a Set and a value as argument
+// If existing in the Set, remove the value from the Set
+// Return the result
+function deleteSetElement (set, val) {
+    for (const elem of set) {
+        if(elem == val) {
+            set.delete(val);
+        }
+    }
+    return set;
+}
+console.log(deleteSetElement(new Set([1, 2, 3]), 1)); // { 2, 3 }
+console.log(deleteSetElement(new Set('12345'), '3')); // { '1', '2', '4', '5' }
