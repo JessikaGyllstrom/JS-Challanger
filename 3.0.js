@@ -68,3 +68,5 @@ function checkIfEarlier (a ,b) {
 }
 console.log(checkIfEarlier(new Date('2000/01/01 08:00:00'), new Date('2000/01/01 08:45:00')));//true
 console.log(checkIfEarlier(new Date('2000/01/01 08:45:00'), new Date('2000/01/01 08:00:00')));//false
+console.log(checkIfEarlier(new Date('2000/01/01 08:00:00'), new Date('2000/01/01 08:00:00')));//false
+
