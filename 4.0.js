@@ -82,4 +82,24 @@ console.log(addValuesToSet(new Set([1, 2, 3]), [4, 5, 6])); // { 1, 2, 3, 4, 5, 
 console.log(addValuesToSet(new Set('12345'), [...'6789'])); // { 1, 2, 3, 4, 5, 6 }
 console.log(addValuesToSet(new Set([1, 2, 3]), [2, 3])); // { 1, 2, 3 }
 
-
+// Get Intersection of two Javascript Sets
+// Write a function that takes two sets (a and b) as arguments
+// Get the intersection of the sets
+// In other words, return a set containing all elements that are both in a as well as b
+function intersectionSet (a, b) {
+    let arrayA = Array.from(a);
+    let arrayB = Array.from(b);
+    const combinedArr = arrayA.concat(arrayB);
+    const set = new Set(combinedArr);
+    const duplicates = combinedArr.filter(item => {
+        if (set.has(item)) {
+            set.delete(item);
+        } else {
+            set.add(item);
+        }
+    });
+    return set;
+}
+console.log(intersectionSet(new Set([1, 2, 3]), new Set([4, 5, 6]))); // {}
+console.log(intersectionSet(new Set('12345'), new Set([...'45678']))); // { '4', '5' }
+console.log(intersectionSet(new Set([1, 2, 3]), new Set([2, 3, 4]))); // { 2, 3 }
